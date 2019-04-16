@@ -1,8 +1,7 @@
 package com.mliuxb.lxbweather;
 
 import android.app.Application;
-
-import org.litepal.LitePal;
+import android.util.Log;
 
 /**
  * Description:
@@ -12,10 +11,12 @@ import org.litepal.LitePal;
  * Date       : 2019/3/18 15:10
  */
 public class MyApplication extends Application {
+    private static final String TAG = "MyApplication";
 
     @Override
     public void onCreate() {
         super.onCreate();
-        LitePal.initialize(this);
+        Log.e(TAG, "onCreate: ...........");
+        //LitePal.initialize(this);
     }
 }
